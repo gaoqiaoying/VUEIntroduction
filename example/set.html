@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{count}}</p>
+        <button onclick="add()">add</button>
+    </div>
+    <script>
+        function add(){
+            // Vue.set(outData,'count',2);
+            outData.count++;
+        }
+        var outData={
+            count:1
+        }
+        var app=new Vue({
+            el:"#app",
+            data:{
+                count:outData
+            }
+    })
+    </script>
+</body>
+</html>

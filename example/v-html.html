@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>v-html v-text</h1>
+    <hr>
+    <div id="app">
+        <div v-html="isLogin">您好，qiaoqiaoying</div>  //xss攻击，尽量避免使用
+        <div>{{isLogin}}</div>
+    </div>
+    <script>
+     var app=new Vue({
+         el:"#app",
+         data:{
+             isLogin:"<h1>qiaoying</h1>"
+         }
+     })
+    </script>
+</body>
+</html>

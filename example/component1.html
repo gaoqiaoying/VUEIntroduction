@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <h1>component-1</h1>
+    <hr>
+    <div id="app">
+        <qiaoying></qiaoying>
+    </div>
+    <script>
+    Vue.component('qiaoying',{
+        template:`<div style="color:red">全局化注册的qiaoying标签</div>`
+    })
+    var app=new Vue({
+        el:"#app",
+        data:{
+
+        }
+    })
+    </script>
+</body>
+</html>
